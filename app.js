@@ -159,7 +159,7 @@ app.get("/profile",function(req,res){
 
 app.get("/submit",function(req,res){
   if(req.isAuthenticated()){
-    res.render("submit");x``
+    res.render("submit");
   }else{
     res.redirect("/login");
   }
