@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+  <meta charset="utf-8">
+  <title>Login</title>
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
+  <link rel="stylesheet" href="css/styles.css">
+  <link rel="stylesheet" href="css/bootstrap-social.css">
+  <link rel="stylesheet" href="css/login.css">
+</head>
+
+<body>
+
+
+<div class="container mt-5">
+  <h1 class="text-danger"> Login </h1>
+
+  <div class="row">
+    <div class="col-lg-7 card">
+      <div class="">
+        <div class="card-body">
+
+          <!-- Makes POST request to /login route -->
+          <form action="/login" method="POST">
+            <div class="form-group">
+              <label for="email">Email</label>
+              <input type="email" class="form-control" name="username">
+            </div>
+            <div class="form-group">
+              <label for="password">Password</label>
+              <input type="password" class="form-control" name="password">
+            </div>
+            <button type="submit" class="btn btn-lg btn-outline-dark inside_btn">Login</button>
+            <button type="submit" class="btn btn-outline-dark btn-sm inside_btn">
+              <a class="btn btn-block btn-google" href="/auth/google" role="button">
+            <i class="fab fa-google"></i>
+            Sign In with Google
+          </a>
+            </button>
+          </form>
+        <br>
+        <a href="/register"> <span> Didn't have an account ?? Register  </span> </a>          
+        </div>
+      </div>
+    </div>
+
+    <div class="col-lg-4 card" style="margin-left:2rem;">
+      <div>
+        <img src="uploads/Mobile_login.gif" alt="log_in" style="width: 100%;" >
+      </div>
+    </div> 
+
+  </div>
+</div>
+
+
+
+</body>
+</html>

@@ -1,0 +1,88 @@
+<%-include('partials/header')%>
+<div class="row row-cols-1 row-cols-md-3 g-4 m-4 p-2">
+    <%peers.forEach(function(pear){ %>
+        <div class="col">
+        <div class="card rounded" style="height:32rem;width:19rem;">
+            <img src="./uploads/<%= pear.image_up%>" class="card-img-top"
+            alt="Skyscrapers"  style="width: 300px;height: 270px;
+            padding: 5px 5px 5px 5px ; border-radius: 15%;" />
+            <div class="card-body">
+            <h5 class="card-title"><%= pear.fname%> <%= pear.lname%></h5>
+            <p class="card-text">
+                <%= pear.description.substring(0,200) + "..."%> 
+            </p>
+            </div>
+            <a href="/login-peer" class="btn btn-success"> Peer Consultant </a>
+            <!-- <div class="card-footer">
+            <small class="text-muted">Last updated 3 mins ago</small>
+            </div> -->
+        </div>
+        </div>
+        <br>
+        <%  }) %>
+
+          <div class="col-lg-3 col-md-6 mb-4 mb-lg-0">
+              <!-- Card-->
+            <%peers.forEach(function(pear){ %>
+              <div class="card rounded shadow-sm border-0">
+                <div class="card-body p-0">
+                  <div class="bg-primary px-5 py-4 text-center card-img-top"><img src="./uploads/<%= pear.image_up%>" alt="..." width="200" class="rounded-circle mb-2 img-thumbnail d-block mx-auto">
+                    <h5 class="text-white mb-0"><%= pear.fname%> <%= pear.lname%></h5>
+                    <p class="small text-white mb-0">Elite user</p>
+                  </div>
+                  <div class="p-4 d-flex justify-content-center">
+                    <p class="card-text">
+                      <%= pear.description.substring(0,200) + "..."%> 
+                    </p>
+                    <ul class="list-inline mb-0">
+                      <li class="list-inline-item">
+                        <!-- <h5 class="font-weight-bold mb-0 d-block">241</h5><small class="text-muted"><i class="fa fa-picture-o mr-1 text-primary"></i>Photos</small> -->
+                      </li>
+                      <li class="list-inline-item">
+                        <!-- <h5 class="font-weight-bold mb-0 d-block">84K</h5><small class="text-muted"><i class="fa fa-user-circle-o mr-1 text-primary"></i>Followers</small> -->
+                        
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+                <a href="/login-peer" class="btn btn-success"> Consullt Peer  </a>
+              </div>
+        <%  }) %>
+
+            </div>
+          
+        <!-- <div class="col">
+      <div class="card h-50 w-75 p-0 m-4">
+        <img src="https://mdbcdn.b-cdn.net/img/new/standard/city/043.webp" class="card-img-top"
+          alt="Los Angeles Skyscrapers" />
+        <div class="card-body">
+          <h5 class="card-title">Card title</h5>
+          <p class="card-text">This card has supporting text below as a natural lead-in to additional content.
+          </p>
+        </div>
+        <div class="card-footer">
+          <small class="text-muted">Last updated 3 mins ago</small>
+        </div>
+      </div>
+    </div> -->
+    <!-- <div class="col">
+      <div class="card h-50 w-75 p-0 m-4">
+        <img src="https://mdbcdn.b-cdn.net/img/new/standard/city/042.webp" class="card-img-top"
+          alt="Palm Springs Road" />
+        <div class="card-body">
+          <h5 class="card-title">Card title</h5>
+          <p class="card-text">
+            This is a wider card with supporting text below as a natural lead-in to
+            additional content. This card has even longer content than the first to show
+            that equal height action.
+          </p>
+        </div>
+        <div class="card-footer">
+          <small class="text-muted">Last updated 3 mins ago</small>
+        </div>
+      </div>
+    </div> -->
+  </div>
+
+
+<%-include('partials/footer')%>

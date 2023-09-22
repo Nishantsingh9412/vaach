@@ -1,0 +1,28 @@
+<%-include('partials/header')%>
+<center>
+<div class="container-fluid p-5" > 
+    <div class="card" style="width:39rem; height: 36rem; text-align: center;">
+        <img class="card-img-top rounded"  width="300px" height="400px" src="/./uploads/<%= single_peer.image_up%>" alt="Card image cap">
+            <div class="card-body">                                         
+            <h5 class="card-title"><%= single_peer.fname%> <%= single_peer.lname%></h5>
+            <!-- <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p> -->
+            </div>
+                <ul class="list-group list-group-flush">
+                <li class="list-group-item"> Age : <%= single_peer.age%> </li>
+                <li class="list-group-item"> Mobile Number : <%= single_peer.phone%></li>
+                <li class="list-group-item"> City :  <%= single_peer.city%></li>
+                <li class="list-group-item"> State: <%= single_peer.state%></li>
+                <li class="list-group-item"> Description : <%= single_peer.description %></li>
+                </ul>
+            <div class="card-body">
+            <a href="#" class="card-link">Approve</a>
+            <a href="#" class="card-link">Deny</a>
+            <a href="#" class="card-link">More Details </a>
+            </div>
+    </div>
+</div>
+</center>
+
+
+
+<%-include('partials/footer')%>
