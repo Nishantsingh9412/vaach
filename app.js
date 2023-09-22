@@ -210,6 +210,7 @@ app.get("/register",function(req,res){
 
 
 app.get("/secrets",function(req,res){
+  if(req.isAuthenticated()){
   User.find({"secret":{$ne:null}},function(err,foundUser){
     if(err){
       console.log(err);
@@ -220,6 +221,10 @@ app.get("/secrets",function(req,res){
       }
     }
   })
+}else{
+      res.redirect("/login"); 
+
+}
 });
 
 app.get("/peer_reg",function(req,res){
