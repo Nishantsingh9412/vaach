@@ -1,0 +1,25 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+
+}
+
+#container{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(50, 70, 255, 0.667);
+    /* backdrop-filter: blur(1rem) brightness(60%); */
+
+}
+
+#addbutton button :hover{
+    color: white;
+}
+
+/* #loginbtn{
+    transition: 2s all ease;
+} */

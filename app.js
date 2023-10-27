@@ -446,9 +446,12 @@ app.post("/login", function(req, res){
               //if true, then log the user in, else redirect to login page
               req.login(user, function(err){
               res.redirect("/secrets");
+              // res.send("success");
               });
             } else {
-              res.redirect("/login");
+              // res.send("login failed");
+              // res.redirect("/login");
+              res.redirect("/");
             }
           }
         })(req, res);
